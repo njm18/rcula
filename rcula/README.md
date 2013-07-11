@@ -1,6 +1,6 @@
 The "rcula" Package
 =================================================
-
+NOTE: This package is still in the early stages of development.
 The rcula package is provides an R interface for the [CULA](http://www.culatools.com/) dense linear algebra library. 
 The actual CULA library is not in general free, but an academic liscence could be obtained freely at the time this package was released. This package is meant to extend the abilities of the package [gmatrix](https://github.com/njm18/gmatrix/tree/master/gmatrix). 
 
@@ -9,7 +9,7 @@ Installation Instructions
 1. Install the the prequasites: [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads),
  [R](http://cran.r-project.org/) and [gmatrix](https://github.com/njm18/gmatrix/tree/master/gmatrix). 
 2. Optain the [CULA](http://www.culatools.com/) dense library and install it.
-3. Start R and then install the 'rcula' package with the following commands. Package compilation may take 5-10 minutes.
+3. Start R and then install the 'rcula' package with the following commands. Package compilation may take some time.
 
 ```
 download.file("http://solomon.case.edu/rcula/rcula_0.5.tar.gz", "rcula.tar.gz")
@@ -48,10 +48,3 @@ Please report any errors to the package maintainer.
 
 Getting Started
 ---------------
-+ Load the library for each sessesion using: library(gmatrix)
-+ To list available gpu devices use: listDevices()
-+ To set the device use: setDevice()
-+ To move object to the device use: g()
-+ To move object to the host use: h()
-+ Object on the device can be manipulated in much the same way other R objects can.
-+ A list of help topics may be optained using: help(package="gmatrix")
