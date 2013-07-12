@@ -13,9 +13,16 @@ setClass("gqr",
 				qraux=NULL)
 ) 
 
+
+setMethod("vectors", c("geigen"),
+		function(a) {
+			return(a@vectors)
+		})
+
 setMethod("qr", "gmatrix",
 		function(x) 
 		{	
+			checkDevice(x@device)
 			if(x@type>1L)
 				type(x)=-0L
 			checkDevice(x@device)
@@ -34,9 +41,12 @@ setMethod("qr", "gmatrix",
 		}
 )
 
+
+
 setMethod("qr.coef", "gqr",
 		function (qr, y) 
 		{
+			#browser()
 			if(qr@qr@type>1L)
 				type(qr@qr)=0L
 			if(qr@qraux@type>1L)
@@ -46,7 +56,7 @@ setMethod("qr.coef", "gqr",
 				type(qr@qr)=totype
 				type(qr@qraux)=totype
 			}
-			
+
 			if (class(y)!="gmatrix") 
 				y <- as.gmatrix(y)
 			else
@@ -68,7 +78,7 @@ setMethod("qr.coef", "gqr",
 			
 			if (p == 0L) 
 				error("gmatrix in qr has a dimension of 0")
-			browser()
+			#browser()
 			#ix <- if (p > n) 
 			#			c(seq_len(n), rep(NA, p - n))
 			#		else seq_len(p)
@@ -80,3 +90,5 @@ setMethod("qr.coef", "gqr",
 			return(y)
 		}
 )
+
+

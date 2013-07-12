@@ -106,7 +106,7 @@ SEXP rcula_qr(SEXP A_in, SEXP qraux_in)
     if(A.type==0L)
     	s = culaDeviceDgeqrfp(m, n, (double *) A.d_vec, m,(double *) qraux->d_vec);
     else
-    	s = culaDeviceSgeqrfp(m, n, (float *) A.d_vec, m,(float *)qraux->d_vec);
+    	s = culaDeviceSgeqrfp(m, n, (float *) A.d_vec, m, (float *) qraux->d_vec);
     CHECK_CULA(s);
 
     return asSEXPint(1L);

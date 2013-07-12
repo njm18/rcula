@@ -1,12 +1,10 @@
-Package: gmatrix
+Package: rcula
 Type: Package
 Title: An R
-Version: 0.5
+Version: 0.1
 Date: 2012-01-20
 Author: Nathan Morris
 Maintainer: Nathan Morris <njm18@case.edu>
-Description:This package is a plug in for the cula software. It 
-allows matrix operations such as eigen decompostion, QR
-decompostion and solutions to linear equations in R using a GPU.
+Description:This package is a provides a conection between R and the cula software. It allows matrix operations such as eigen decompostion, QR decompostion and solutions to linear equations in R using a GPU.
 License: GPL-2
-Depends:gmatrix
+Depends:gmatrix, methods
