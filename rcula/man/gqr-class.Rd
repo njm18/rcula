@@ -3,10 +3,11 @@
 \docType{class}
 \alias{gqr-class}
 
+\alias{qr.coef}
 \alias{qr.coef-methods}
 \alias{qr.coef,ANY-method}
 \alias{qr.coef,gqr-method}
-
+\alias{solve}
 \alias{solve-methods}
 \alias{solve,ANY-method}
 \alias{solve,gqr-method}
@@ -14,7 +15,7 @@
 
 \title{Class \code{"gqr"}}
 \description{
-Conatians the results of a QR decomposition from the \code{qr()} method.
+Conatians the results of a QR decomposition from the \code{qr()} method. Note that the \code{solve} function uses QR decpompostion. Also, \code{qr.coef} acts on the \code{gqr} object.
 }
 \section{Objects from the Class}{
 Objects can be created by calls of the \code{qr()} method.

@@ -48,3 +48,21 @@ Please report any errors to the package maintainer.
 
 Getting Started
 ---------------
+Here are some examples of how to use the solve function:
+
+    A=gmatrix(grnorm(400),20,20)
+    b=grnorm(20)
+    Ainverse = solve(A)
+    z=solve(A,b)
+
+Here are some examples of how to use the qr function:
+
+    B=qr(A)
+    Ainverse2=solve(B)
+
+Examples of symmetrice eigen decomposition:
+
+    C=crossprod(A)
+    Ceig=gsymeigen(C)
+    vals = h(values(Ceig))
+    vecs = h(vectors(Ceig))

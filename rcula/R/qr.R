@@ -20,7 +20,7 @@ setMethod("vectors", c("geigen"),
 		})
 
 setMethod("qr", "gmatrix",
-		function(x) 
+		function(x,...) 
 		{	
 			checkDevice(x@device)
 			if(x@type>1L)
@@ -43,8 +43,8 @@ setMethod("qr", "gmatrix",
 
 
 
-setMethod("qr.coef", "gqr",
-		function (qr, y) 
+setMethod("qr.coef",  signature(qr = "gqr", y = "ANY"),
+		function(qr, y) 
 		{
 			#browser()
 			if(qr@qr@type>1L)
@@ -77,7 +77,7 @@ setMethod("qr.coef", "gqr",
 			ny <- as.integer(ncol(y))
 			
 			if (p == 0L) 
-				error("gmatrix in qr has a dimension of 0")
+				stop("gmatrix in qr has a dimension of 0")
 			#browser()
 			#ix <- if (p > n) 
 			#			c(seq_len(n), rep(NA, p - n))
