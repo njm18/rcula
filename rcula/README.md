@@ -20,7 +20,7 @@ file.remove("rcula.tar.gz")
 Installation Note
 -----------------
 By default, when compiling, the makefile assumes that
-+ The the CUDA library files are located in the folder /usr/local/cuda/lib64.
++ The CUDA library files are located in the folder /usr/local/cuda/lib64.
 + The CUDA include path is /usr/local/cuda/include
 + The CULA library files are located in /usr/local/cula/lib64
 + The CULA include path is /usr/local/cula/include
