@@ -35,6 +35,7 @@ CULA_LIB_PATH ?= /usr/local/cula/lib64
 
 If these are incorrect assumptions, the user may set these values and install using the follwing R commands as an example.
 First set the environmental variables:
+
     Sys.setenv(CUDA_INC_PATH="/usr/include/cuda-5.0/include")
     Sys.setenv(CULA_INC_PATH="/usr/include/cula_new/include")
     Sys.setenv(CUDA_LIB_PATH="/usr/include/cuda-5.0/lib64")
