@@ -21,13 +21,24 @@ Installation Note
 -----------------
 By default, when compiling, the makefile assumes that
 + The the CUDA library files are located in the folder /usr/local/cuda/lib64.
++ The CUDA include path is /usr/local/cuda/include
++ The CULA library files are located in /usr/local/cula/lib64
++ The CULA include path is /usr/local/cula/include
+
+CUDA_INC_PATH ?= 
+CULA_INC_PATH ?= /usr/local/cula/include
+CUDA_LIB_PATH ?= /usr/local/cuda/lib64
+CULA_LIB_PATH ?= /usr/local/cula/lib64
+
 + The R libraries are located in the folder /usr/include/R.
 + The compute capibility of the target device is 2.0.
 
 If these are incorrect assumptions, the user may set these values and install using the follwing R commands as an example.
 First set the environmental variables:
-
+    Sys.setenv(CUDA_INC_PATH="/usr/include/cuda-5.0/include")
+    Sys.setenv(CULA_INC_PATH="/usr/include/cula_new/include")
     Sys.setenv(CUDA_LIB_PATH="/usr/include/cuda-5.0/lib64")
+    Sys.setenv(CULA_LIB_PATH="/usr/include/cula_new/lib64")
     Sys.setenv(R_INC_PATH="/usr/local/R/R-2.15.0/lib64/R/include")
     Sys.setenv(NVCC_ARCH="-gencode arch=compute_30,code=sm_30")
     
