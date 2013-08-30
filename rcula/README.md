@@ -24,12 +24,6 @@ By default, when compiling, the makefile assumes that
 + The CUDA include path is /usr/local/cuda/include
 + The CULA library files are located in /usr/local/cula/lib64
 + The CULA include path is /usr/local/cula/include
-
-CUDA_INC_PATH ?= 
-CULA_INC_PATH ?= /usr/local/cula/include
-CUDA_LIB_PATH ?= /usr/local/cuda/lib64
-CULA_LIB_PATH ?= /usr/local/cula/lib64
-
 + The R libraries are located in the folder /usr/include/R.
 + The compute capibility of the target device is 2.0.
 
